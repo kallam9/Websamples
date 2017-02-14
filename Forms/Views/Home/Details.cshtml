@@ -1,0 +1,63 @@
+﻿@model Forms.Models.formmodel
+@{
+    ViewBag.Title = "form";
+}
+
+
+Name = @TempData["Name"]
+<br />
+Fathers Name = @TempData["Fathersname"]
+<br />
+
+Date of Birth = @TempData["Dateofbirth"]
+<br />
+Email ID = @TempData["EmailID"]
+
+
+@*<h2>form</h2>
+
+<form action="/" method="post"></form>
+<legend>RegistrationForm</legend>
+@using (Ajax.BeginForm("Details", "Home",
+                                                                new AjaxOptions { UpdateTargetId = "formdetails" }))
+{
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <div id="formdetails"></div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fathersname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fathersname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateofBirth)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateofBirth)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailID)
+        </div>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>*@
+    @*//    }
+
+    //    @section Scripts {
+    //        @Scripts.Render("~/bundles/jqueryval")
+    //}*@

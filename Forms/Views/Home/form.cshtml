@@ -1,0 +1,116 @@
+﻿@model Forms.Models.formmodel
+@{
+    ViewBag.Title = "form";
+}
+
+<h2>form</h2>
+
+<form action="/Home/Details" method="post">
+   Name: <input type="text" name="txtName"/>
+    <br />
+    Fathers Name:<input type="text" name="txtFathersname" />
+    <br/>
+   Date of Birth: <input type="text" name="txtDateofbirth" />
+    <br/>
+    Email ID :<input type="text" name="txtEmailID" />
+    <br/>
+
+    <input type="submit" name="Submit" value="submit" />
+</form>
+
+
+
+
+
+@*Name = @TempData["Name"]
+<br />
+
+Fathers Name = @TempData["Fathersname"]
+<br />
+
+Date of Birth = @TempData["Dateofbirth"]
+<br />
+Email ID = @TempData["EmailID"]
+
+<br />*@
+
+
+
+
+@*<fieldset>
+    <legend>RegistrationForm</legend>
+    @using (Ajax.BeginForm("form", "Home",
+                                                                            new AjaxOptions { UpdateTargetId = "formdetails" }))
+    {
+
+
+        <legend>Registration Form</legend>
+        <div id="formdetails"></div>
+        <ol>
+            <li>
+                @Html.Label("Name")
+                @Html.TextBox("txtName")
+            </li>
+            <li>
+                @Html.Label("Fathers Name")
+                @Html.TextBox("txtFathersname")
+            </li>
+            <li>
+                @Html.Label("Date of Birth")
+                @Html.TextBox("txtDateofbirth")
+            </li>
+
+            <li>
+                @Html.Label("Email ID")
+                @Html.TextBox("txtEmailID")
+            </li>
+        </ol>
+            <button>Submit</button>
+
+    }
+</fieldset>*@
+
+
+@*<legend>RegistrationForm</legend>
+@using (Ajax.BeginForm("form", "Home",
+                                                                            new AjaxOptions { UpdateTargetId = "formdetails" }))
+{
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <div id="formdetails"></div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fathersname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fathersname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateofBirth)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateofBirth)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailID)
+        </div>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>*@
+
+
+
+

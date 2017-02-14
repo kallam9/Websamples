@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<form action="/" method="post">
+    @Html.AntiForgeryToken();
+    <input type="text" name="txtDemo" value="" />
+    <input type="Submit" name="Submit" value="" />
+
+</form>
+
+id = @ViewBag.id;
+
+ 
